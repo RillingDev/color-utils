@@ -8,7 +8,7 @@ repository = "https://github.com/RillingDev/color-utils"
 description = """
 Library for programmatic usage of color-utils.
 """
-edition = "2021"
+edition = "2024"
 
 [dependencies.palette]
 version = "0.7.6"
