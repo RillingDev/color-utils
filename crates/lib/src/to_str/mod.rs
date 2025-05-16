@@ -1,7 +1,7 @@
 pub use crate::to_str::hsl_function::to_hsl_function_str;
 pub use crate::to_str::hwb_function::to_hwb_function_str;
 pub use crate::to_str::rgb_function::to_rgb_function_str;
-pub use crate::to_str::rgb_hex::{to_rgb_hex_str, LetterCase, ShorthandNotation};
+pub use crate::to_str::rgb_hex::{LetterCase, ShorthandNotation, to_rgb_hex_str};
 
 mod common;
 mod css_types;

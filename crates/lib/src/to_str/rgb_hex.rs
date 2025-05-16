@@ -39,6 +39,7 @@ fn format_hex(channel: u8) -> String {
 /// For details see the [CSS color specification](https://www.w3.org/TR/css-color-4/#hex-notation).
 ///
 /// Note that values more precise than the 8 bit supported for the hexadecimal notation must be cast beforehand, which might be lossy.
+#[must_use]
 pub fn to_rgb_hex_str(
 	color: &Srgba<u8>,
 	omit_alpha_channel: OmitAlphaChannel,

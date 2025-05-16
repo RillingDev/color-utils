@@ -79,7 +79,7 @@ fn print_contrast_ratio(
 	print_color(out, color_2, options.format)?;
 
 	let contrast_ratio = color_1.relative_contrast(**color_2);
-	writeln!(out, " is {:.2}.", contrast_ratio)
+	writeln!(out, " is {contrast_ratio:.2}.")
 }
 
 fn print_contrast_levels_reached(
@@ -99,7 +99,6 @@ fn print_contrast_levels_reached(
 	};
 	writeln!(
 		out,
-		"Contrast level(s) reached: {}.",
-		contrast_levels_reached_str
+		"Contrast level(s) reached: {contrast_levels_reached_str}."
 	)
 }

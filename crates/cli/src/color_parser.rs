@@ -1,15 +1,15 @@
-use anyhow::{anyhow, Error, Result};
+use anyhow::{Error, Result, anyhow};
 use cssparser::{ParseError, ParseErrorKind, Parser, ParserInput};
 use cssparser_color::Color;
 use palette::rgb::{Rgb, Rgba};
 use palette::{Hsl, Hwb, IntoColor, Lab, Lch, Oklab, Oklch, WithAlpha};
 
-fn map_parse_error<'i>(err: ParseError<'i, ()>) -> Error {
+fn map_parse_error(err: ParseError<()>) -> Error {
 	anyhow!(
 		"{} at L{}:{}.",
 		match err.kind {
 			ParseErrorKind::Basic(kind) => kind.to_string(),
-			ParseErrorKind::Custom(_) => "Unknown error".to_string(),
+			ParseErrorKind::Custom(()) => "Unknown error".to_string(),
 		},
 		err.location.line,
 		err.location.column

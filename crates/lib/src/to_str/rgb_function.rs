@@ -13,6 +13,7 @@ fn format_color_channel(color_channel: f32, unit: ChannelUnit) -> String {
 
 /// Creates a CSS-style RGB function string for this color.
 /// For details see the [CSS color specification](https://www.w3.org/TR/css-color-4/#rgb-functions).
+#[must_use]
 pub fn to_rgb_function_str(
 	color: &Srgba,
 	omit_alpha_channel: OmitAlphaChannel,

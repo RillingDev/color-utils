@@ -2,6 +2,7 @@ use palette::{Srgba, WithAlpha};
 
 /// Checks if the color is fully opaque
 // TODO: allow any `Alpha` type
+#[must_use]
 pub fn is_opaque(srgba: &Srgba) -> bool {
 	srgba.eq(&srgba.with_alpha(1.0))
 }

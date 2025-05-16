@@ -6,6 +6,7 @@ use crate::to_str::{ChannelUnit, OmitAlphaChannel};
 
 /// Creates a CSS-style HSL function string for this color.
 /// For details see the [CSS color specification](https://www.w3.org/TR/css-color-4/#the-hsl-notation).
+#[must_use]
 pub fn to_hsl_function_str(
 	color: &Hsla,
 	omit_alpha_channel: OmitAlphaChannel,

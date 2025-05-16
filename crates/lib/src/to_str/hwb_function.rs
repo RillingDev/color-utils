@@ -6,6 +6,7 @@ use crate::to_str::{ChannelUnit, OmitAlphaChannel};
 
 /// Creates a CSS-style HWB function string for this color.
 /// For details see the [CSS color specification](https://www.w3.org/TR/css-color-4/#the-hwb-notation).
+#[must_use]
 pub fn to_hwb_function_str(
 	color: &Hwba,
 	omit_alpha_channel: OmitAlphaChannel,
